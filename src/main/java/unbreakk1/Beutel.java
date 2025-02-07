@@ -14,11 +14,10 @@ public class Beutel
         }
     }
 
-    private Node head;  // Points to the beginning of the list
-    private Node tail;  // Points to the end of the list
+    private Node head;  // Points to the beginning
+    private Node tail;  // Points to the end
     private int size;   // Tracks number of elements
 
-    // Constructor to initialize an empty Beutel
     public Beutel()
     {
         this.head = null;
