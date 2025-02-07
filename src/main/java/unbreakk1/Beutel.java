@@ -42,4 +42,29 @@ public class Beutel
         }
         size++;
     }
+
+    public Object get(int index)
+    {
+        if (index < 0 || index >= size)
+        {
+            throw new IndexOutOfBoundsException("Index: " + index + " is out of bounds!");
+        }
+
+        Node current = head;
+        int currentIndex = 0;
+
+        // loop the list until the desired index
+        while (currentIndex < index)
+        {
+            current = current.next;
+            currentIndex++;
+        }
+
+        return current.value; // Return value at index
+    }
+
+    public int size()
+    {
+        return size;
+    }
 }
