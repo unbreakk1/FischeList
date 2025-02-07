@@ -1,6 +1,8 @@
-﻿package unbreakk1;
+package unbreakk1;
 
+import java.util.ArrayList;
 import java.util.Objects;
+import java.util.List;
 
 public class Student
 {
@@ -8,7 +10,13 @@ public class Student
     protected String lastName;
     protected String id;
 
-    public Student() {}
+    private List<Course> courses;
+
+
+    public Student()
+    {
+        courses = new ArrayList<>();
+    }
 
     public Student(String firstName, String lastName, String id)
     {
@@ -16,6 +24,21 @@ public class Student
         this.lastName = lastName;
         this.id = id;
     }
+
+    public void addCourse(Course course) {
+        if (course != null) {
+            courses.add(course);
+            System.out.println("Course " + course.getCourseName() + " added to " + firstName + " " + lastName);
+        } else {
+            System.out.println("Invalid course! Cannot add.");
+        }
+    }
+
+    // Getter for the courses list
+    public List<Course> getCourses() {
+        return courses;
+    }
+
 
     //<editor-fold>desc="Getter & Setter">
     public String getFirstName()
