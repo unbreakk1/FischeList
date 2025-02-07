@@ -8,7 +8,8 @@ public class Beutel
         Object value;
         Node next;
 
-        Node(Object value) {
+        Node(Object value)
+        {
             this.value = value;
             this.next = null;
         }
@@ -25,4 +26,20 @@ public class Beutel
         this.size = 0;
     }
 
+    public void add(Object value)
+    {
+        Node newNode = new Node(value);
+        if (head == null)
+        {
+            // If the list is empty, set both head and tail to the new node
+            head = newNode;
+            tail = newNode;
+        } else
+        {
+            // Otherwise, add the new node to the end of the list and update the tail
+            tail.next = newNode;
+            tail = newNode;
+        }
+        size++;
+    }
 }
