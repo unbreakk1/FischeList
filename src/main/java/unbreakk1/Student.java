@@ -23,6 +23,8 @@ public class Student
         this.firstName = firstName;
         this.lastName = lastName;
         this.id = id;
+        courses = new ArrayList<>();
+
     }
 
     public void addCourse(Course course) {

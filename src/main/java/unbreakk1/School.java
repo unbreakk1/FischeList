@@ -54,4 +54,17 @@ public class School
         }
     }
 
+    public List<Course> getStudentCoursesById(String studentId) {
+        Student student = findStudentById(studentId);
+        if (student != null) {
+            return student.getCourses();
+        } else {
+            System.out.println("Cannot retrieve courses. Student with ID " + studentId + " does not exist.");
+            return new ArrayList<>(); // Return an empty list if student is not found
+        }
+    }
+
+
+
+
 }
