@@ -3,8 +3,6 @@ package unbreakk1;
 import java.util.List;
 import java.util.ArrayList;
 
-;
-
 public class Main
 {
     public static void main(String[] args)
@@ -50,7 +48,25 @@ public class Main
             System.out.println(course);
         }
         //</editor-fold>
-    }
+        //<editor-fold>desc="BONUS BEUTEL">
+        Beutel beutel = new Beutel();
 
+        beutel.add("Apple");
+        beutel.add("Banana");
+        beutel.add("Cherry");
+
+        System.out.println("Size: " + beutel.size()); // Output: 3
+        System.out.println(beutel.get(1)); // Output: Banana
+
+        beutel.removeLast();
+        System.out.println("Size after removing last: " + beutel.size()); // Output: 2
+
+        beutel.removeByIndex(0);
+        System.out.println("Size after removing index 0: " + beutel.size()); // Output: 1
+
+        System.out.println(beutel.contains("Banana")); // Output: true
+        //</editor-fold>
+    }
 }
+
 
