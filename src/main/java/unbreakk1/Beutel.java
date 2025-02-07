@@ -3,7 +3,7 @@
 public class Beutel
 {
     // Inner class for the Node
-    private class Node
+    private static class Node
     {
         Object value;
         Node next;
