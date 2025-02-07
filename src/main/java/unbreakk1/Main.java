@@ -39,12 +39,14 @@ public class Main
 
 
         System.out.println("\nCourses of Wanda Waffles:");
-        for (Course course : school.getStudentCoursesById("S001")) {
+        for (Course course : school.getStudentCoursesById("S001"))
+        {
             System.out.println(course);
         }
 
         System.out.println("\nCourses of Tommy Tickles:");
-        for (Course course : school.getStudentCoursesById("S002")) {
+        for (Course course : school.getStudentCoursesById("S002"))
+        {
             System.out.println(course);
         }
         //</editor-fold>
